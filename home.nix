@@ -37,11 +37,11 @@
   programs.vim = {
     enable = true;
     plugins = with pkgs.vimPlugins; [
+      vim-sensible
+
       vim-commentary
     ];
     extraConfig = ''
-      filetype plugin indent on
-      syntax on
       set autoindent
       set smartindent
 
@@ -51,7 +51,6 @@
 
       set hlsearch
       set ignorecase
-      set incsearch
       set smartcase
 
       set splitbelow
@@ -60,11 +59,9 @@
       noremap j gj
       noremap k gk
 
-      set backspace=indent
       set clipboard=unnamed
+
       set nojoinspaces
-      set ruler
-      set ttimeoutlen=100
     '';
   };
 }
