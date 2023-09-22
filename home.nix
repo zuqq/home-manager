@@ -63,5 +63,6 @@
 
       set nojoinspaces
     '';
+    packageConfigurable = pkgs.vim-darwin;
   };
 }
