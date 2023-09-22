@@ -1,0 +1,20 @@
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	up = rebase
+[core]
+	excludesfile = ~/.gitignore
+[merge]
+	conflictstyle = diff3
+[pull]
+	rebase = true
+[push]
+	autoSetupRemote = true
+[rebase]
+	autosquash = true
+[rerere]
+	enabled = true
+[user]
+	name = zuqq
+	email = noahheld17@gmail.com
