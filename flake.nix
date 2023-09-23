@@ -25,18 +25,23 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, pure, zsh-autosuggestions, zsh-z, ... }:
-    let
-      system = "x86_64-darwin";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in
-    {
-      homeConfigurations."zuqq" = home-manager.lib.homeManagerConfiguration {
-        modules = [ ./home.nix ];
-        inherit pkgs;
-        extraSpecialArgs = {
-          inherit pure zsh-autosuggestions zsh-z;
-        };
+  outputs = {
+    nixpkgs,
+    home-manager,
+    pure,
+    zsh-autosuggestions,
+    zsh-z,
+    ...
+  }: let
+    system = "x86_64-darwin";
+    pkgs = nixpkgs.legacyPackages.${system};
+  in {
+    homeConfigurations."zuqq" = home-manager.lib.homeManagerConfiguration {
+      modules = [./home.nix];
+      inherit pkgs;
+      extraSpecialArgs = {
+        inherit pure zsh-autosuggestions zsh-z;
       };
     };
+  };
 }

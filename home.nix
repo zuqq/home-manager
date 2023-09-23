@@ -1,9 +1,10 @@
-{ config
-, pkgs
-, pure
-, zsh-autosuggestions
-, zsh-z
-, ...
+{
+  config,
+  pkgs,
+  pure,
+  zsh-autosuggestions,
+  zsh-z,
+  ...
 }: {
   home.username = "zuqq";
   home.homeDirectory = "/Users/zuqq";
