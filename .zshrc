@@ -27,4 +27,4 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # See: https://github.com/agkozak/zsh-z
 source ~/.zsh/zsh-z/zsh-z.plugin.zsh
-autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit -i
