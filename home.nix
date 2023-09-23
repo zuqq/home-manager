@@ -1,4 +1,10 @@
-{ config, pkgs, ... }: {
+{ config
+, pkgs
+, pure
+, zsh-autosuggestions
+, zsh-z
+, ...
+}: {
   home.username = "zuqq";
   home.homeDirectory = "/Users/zuqq";
 
@@ -25,10 +31,9 @@
 
     ".tmux.conf".source = ./.tmux.conf;
 
-    ".zsh" = {
-      source = ./.zsh;
-      recursive = true;
-    };
+    ".zsh/pure".source = pure;
+    ".zsh/zsh-autosuggestions".source = zsh-autosuggestions;
+    ".zsh/zsh-z".source = zsh-z;
     ".zshrc".source = ./.zshrc;
   };
 
