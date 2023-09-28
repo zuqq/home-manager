@@ -1,29 +1,37 @@
-filetype plugin indent on
-syntax on
+noremap j gj
+noremap k gk
+
+syntax enable
+
 set autoindent
 set smartindent
 
-set expandtab
-set shiftwidth=4
-set softtabstop=4
-
-set hlsearch
-set ignorecase
-set incsearch
-set smartcase
-
-set splitbelow
-set splitright
-
-noremap j gj
-noremap k gk
+set autoread
 
 set backspace=indent,eol,start
 
 set clipboard=unnamed
 
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+
+set formatoptions+=jn
+
+set hlsearch
+nnoremap <silent> <C-L> :nohlsearch<CR>
+set ignorecase
+set incsearch
+set smartcase
+
+set laststatus=2
+set ruler
+set wildmenu
+
 set nojoinspaces
 
-set ruler
+set splitbelow
+set splitright
 
+set ttimeout
 set ttimeoutlen=100

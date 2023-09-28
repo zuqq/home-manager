@@ -43,8 +43,6 @@
   programs.vim = {
     enable = true;
     plugins = with pkgs.vimPlugins; [
-      vim-sensible
-
       vim-commentary
     ];
     extraConfig = builtins.readFile ./.vimrc;
