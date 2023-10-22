@@ -36,7 +36,7 @@
     system = "x86_64-darwin";
     pkgs = nixpkgs.legacyPackages.${system};
   in {
-    homeConfigurations."noah" = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations.noah = home-manager.lib.homeManagerConfiguration {
       modules = [./home.nix];
       inherit pkgs;
 
