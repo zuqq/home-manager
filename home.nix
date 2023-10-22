@@ -6,8 +6,8 @@
   zsh-z,
   ...
 }: {
-  home.username = "zuqq";
-  home.homeDirectory = "/Users/zuqq";
+  home.username = "noah";
+  home.homeDirectory = "/Users/noah";
 
   home.stateVersion = "23.05";
 
