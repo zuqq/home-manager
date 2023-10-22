@@ -26,6 +26,7 @@ set smartcase
 
 set laststatus=2
 set ruler
+set scrolloff=0
 set wildmenu
 
 set nojoinspaces
