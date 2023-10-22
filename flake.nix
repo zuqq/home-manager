@@ -1,5 +1,5 @@
 {
-  description = "Home Manager configuration of zuqq";
+  description = "home-manager";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -36,7 +36,7 @@
     system = "x86_64-darwin";
     pkgs = nixpkgs.legacyPackages.${system};
   in {
-    homeConfigurations."zuqq" = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations."noah" = home-manager.lib.homeManagerConfiguration {
       modules = [./home.nix];
       inherit pkgs;
       extraSpecialArgs = {
