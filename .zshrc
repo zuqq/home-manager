@@ -28,3 +28,5 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # See: https://github.com/agkozak/zsh-z
 source ~/.zsh/zsh-z/zsh-z.plugin.zsh
 autoload -Uz compinit && compinit -i
+
+export LESS='--RAW-CONTROL-CHARS --tabs=4 --quit-if-one-screen'

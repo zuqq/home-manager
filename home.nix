@@ -36,7 +36,12 @@
     ".zsh/pure".source = pure;
     ".zsh/zsh-autosuggestions".source = zsh-autosuggestions;
     ".zsh/zsh-z".source = zsh-z;
-    ".zshrc".source = ./.zshrc;
+  };
+
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
   };
 
   programs.home-manager.enable = true;
@@ -48,5 +53,10 @@
     ];
     extraConfig = builtins.readFile ./.vimrc;
     packageConfigurable = pkgs.vim-darwin;
+  };
+
+  programs.zsh = {
+    enable = true;
+    initExtra = builtins.readFile ./.zshrc;
   };
 }

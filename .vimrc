@@ -36,3 +36,5 @@ set splitright
 
 set ttimeout
 set ttimeoutlen=100
+
+autocmd Filetype go setlocal noexpandtab shiftwidth=4 softtabstop=4 tabstop=4
