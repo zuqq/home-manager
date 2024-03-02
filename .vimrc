@@ -15,6 +15,7 @@ set clipboard=unnamed
 set expandtab
 set shiftwidth=4
 set softtabstop=4
+set tabstop=4
 
 set formatoptions+=jn
 
@@ -27,6 +28,7 @@ set smartcase
 set laststatus=2
 set ruler
 set scrolloff=0
+set noshowcmd
 set wildmenu
 
 set nojoinspaces
@@ -37,4 +39,10 @@ set splitright
 set ttimeout
 set ttimeoutlen=100
 
-autocmd Filetype go setlocal noexpandtab shiftwidth=4 softtabstop=4 tabstop=4
+autocmd Filetype go setlocal noexpandtab
+
+autocmd Filetype nix setlocal shiftwidth=2 softtabstop=2 tabstop=2
+
+autocmd Filetype objc setlocal commentstring=/*%s*/
+
+let mapleader = " "

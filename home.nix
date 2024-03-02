@@ -21,6 +21,8 @@
     pkgs.ripgrep
     pkgs.tmux
     pkgs.yq
+
+    pkgs.nodePackages.pyright
   ];
 
   home.file = {
@@ -46,13 +48,34 @@
 
   programs.home-manager.enable = true;
 
-  programs.vim = {
+  programs.neovim = {
     enable = true;
+    viAlias = true;
+    vimAlias = true;
     plugins = with pkgs.vimPlugins; [
       vim-commentary
+
+      {
+        plugin = telescope-nvim;
+        type = "lua";
+        config = builtins.readFile ./nvim/telescope-nvim.lua;
+      }
+
+      {
+        plugin = nvim-treesitter.withAllGrammars;
+        type = "lua";
+        config = builtins.readFile ./nvim/nvim-treesitter.lua;
+      }
+
+      {
+        plugin = nvim-lspconfig;
+        type = "lua";
+        config = builtins.readFile ./nvim/nvim-lspconfig.lua;
+      }
+
+      which-key-nvim
     ];
     extraConfig = builtins.readFile ./.vimrc;
-    packageConfigurable = pkgs.vim-darwin;
   };
 
   programs.zsh = {
