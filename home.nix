@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  alacritty-theme,
   pure,
   zsh-autosuggestions,
   zsh-z,
@@ -38,6 +39,29 @@
     ".zsh/pure".source = pure;
     ".zsh/zsh-autosuggestions".source = zsh-autosuggestions;
     ".zsh/zsh-z".source = zsh-z;
+  };
+
+  programs.alacritty = {
+    enable = true;
+    settings = {
+      # See: https://developer.apple.com/fonts/
+      font = {
+        bold = {
+          family = "SF Mono";
+          style = "Bold";
+        };
+        italic = {
+          family = "SF Mono";
+          style = "Italic";
+        };
+        normal = {
+          family = "SF Mono";
+          style = "Regular";
+        };
+        size = 13.0;
+      };
+      import = [alacritty-theme];
+    };
   };
 
   programs.direnv = {

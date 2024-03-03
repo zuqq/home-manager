@@ -9,6 +9,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    alacritty-theme.url = "github:alexghr/alacritty-theme.nix";
+
     pure = {
       url = "github:sindresorhus/pure";
       flake = false;
@@ -28,6 +30,7 @@
   outputs = {
     nixpkgs,
     home-manager,
+    alacritty-theme,
     pure,
     zsh-autosuggestions,
     zsh-z,
@@ -42,6 +45,8 @@
 
       extraSpecialArgs = {
         inherit pure zsh-autosuggestions zsh-z;
+
+        alacritty-theme = alacritty-theme.packages.${system}.campbell;
       };
     };
   };
