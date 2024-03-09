@@ -11,6 +11,8 @@
 	autoSetupRemote = true
 [rebase]
 	autosquash = true
+[rerere]
+    enabled = true
 [user]
 	name = zuqq
 	email = noahheld17@gmail.com
