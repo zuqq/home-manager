@@ -5,6 +5,8 @@
 	up = rebase
 [core]
 	excludesfile = ~/.gitignore
+[merge]
+    conflictstyle = diff3
 [pull]
 	rebase = true
 [push]
