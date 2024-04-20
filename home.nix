@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  alacritty-theme,
   pure,
   zsh-autosuggestions,
   zsh-z,
@@ -60,7 +59,6 @@
         };
         size = 13.0;
       };
-      import = [alacritty-theme];
     };
   };
 

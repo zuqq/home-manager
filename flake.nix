@@ -9,8 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    alacritty-theme.url = "github:alexghr/alacritty-theme.nix";
-
     pure = {
       url = "github:sindresorhus/pure";
       flake = false;
@@ -30,7 +28,6 @@
   outputs = {
     nixpkgs,
     home-manager,
-    alacritty-theme,
     pure,
     zsh-autosuggestions,
     zsh-z,
@@ -40,14 +37,11 @@
     pkgs = nixpkgs.legacyPackages.${system};
   in {
     homeConfigurations.noah = home-manager.lib.homeManagerConfiguration {
-      modules = [./home.nix];
-      inherit pkgs;
-
       extraSpecialArgs = {
         inherit pure zsh-autosuggestions zsh-z;
-
-        alacritty-theme = alacritty-theme.packages.${system}.campbell;
       };
+      modules = [./home.nix];
+      inherit pkgs;
     };
   };
 }
