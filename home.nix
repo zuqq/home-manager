@@ -40,28 +40,6 @@
     ".zsh/zsh-z".source = zsh-z;
   };
 
-  programs.alacritty = {
-    enable = true;
-    settings = {
-      # See: https://developer.apple.com/fonts/
-      font = {
-        bold = {
-          family = "SF Mono";
-          style = "Bold";
-        };
-        italic = {
-          family = "SF Mono";
-          style = "Italic";
-        };
-        normal = {
-          family = "SF Mono";
-          style = "Regular";
-        };
-        size = 13.0;
-      };
-    };
-  };
-
   programs.direnv = {
     enable = true;
     enableZshIntegration = true;
@@ -69,6 +47,15 @@
   };
 
   programs.home-manager.enable = true;
+
+  programs.kitty = {
+    enable = true;
+    # See: https://developer.apple.com/fonts/
+    font = {
+      name = "SF Mono";
+      size = 13.0;
+    };
+  };
 
   programs.neovim = {
     enable = true;
