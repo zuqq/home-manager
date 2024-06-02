@@ -55,6 +55,14 @@
       name = "SF Mono";
       size = 13.0;
     };
+    keybindings =
+      pkgs.lib.attrsets.mergeAttrsList
+      (
+        builtins.map
+        (i: let s = builtins.toString i; in {"cmd+${s}" = "goto_tab ${s}";})
+        (pkgs.lib.range 1 9)
+      )
+      // {"cmd+0" = "goto_tab 10";};
   };
 
   programs.neovim = {
