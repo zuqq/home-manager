@@ -3,6 +3,7 @@ local telescope_builtin = require("telescope.builtin")
 local which_key = require("which-key")
 
 lspconfig.gopls.setup {}
+lspconfig.hls.setup {}
 lspconfig.pyright.setup {}
 
 vim.api.nvim_create_autocmd("LspAttach", {

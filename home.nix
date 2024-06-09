@@ -23,6 +23,10 @@
     pkgs.yq
 
     pkgs.nodePackages.pyright
+
+    pkgs.cabal-install
+    pkgs.ghc
+    pkgs.haskell-language-server
   ];
 
   home.file = {
