@@ -20,6 +20,11 @@
     tmux
     yq
 
+    # Haskell
+    cabal-install
+    ghc
+    haskell-language-server
+
     # Python
     pyright
     python3
