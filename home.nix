@@ -12,6 +12,8 @@
   home.stateVersion = "23.05";
 
   home.packages = [
+    pkgs.alejandra
+
     pkgs.bash
     pkgs.curl
     pkgs.fd
