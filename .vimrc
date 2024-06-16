@@ -22,6 +22,7 @@ set softtabstop=4
 set tabstop=4
 autocmd Filetype go setlocal noexpandtab
 autocmd Filetype lua setlocal shiftwidth=2 softtabstop=2 tabstop=2
+autocmd Filetype nix setlocal shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype objc setlocal commentstring=/*%s*/
 
 let mapleader = " "

@@ -25,6 +25,9 @@
     ghc
     haskell-language-server
 
+    # Nix
+    alejandra
+
     # Python
     pyright
     python3
