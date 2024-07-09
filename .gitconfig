@@ -6,7 +6,7 @@
 [core]
 	excludesfile = ~/.gitignore
 [merge]
-    conflictstyle = diff3
+	conflictstyle = diff3
 [pull]
 	rebase = true
 [push]
@@ -14,7 +14,7 @@
 [rebase]
 	autosquash = true
 [rerere]
-    enabled = true
+	enabled = true
 [user]
 	name = zuqq
 	email = noahheld17@gmail.com
