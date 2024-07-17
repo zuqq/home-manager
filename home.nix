@@ -24,7 +24,7 @@
     pkgs.tmux
     pkgs.yq
 
-    pkgs.nodePackages.pyright
+    pkgs.pyright
     pkgs.python3
 
     pkgs.cabal-install
