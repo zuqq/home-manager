@@ -31,6 +31,7 @@
     # Python
     pyright
     python3
+    ruff
   ];
   home.file = {
     ".editrc".source = ./.editrc;
