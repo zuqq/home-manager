@@ -5,6 +5,15 @@ local which_key = require("which-key")
 lspconfig.gopls.setup {}
 lspconfig.hls.setup {}
 lspconfig.pyright.setup {}
+lspconfig.ruff.setup {
+    on_attach = function(client, bufnr)
+        if client.name == "ruff" then
+            client.server_capabilities.codeActionProvider = nil
+            client.server_capabilities.diagnosticProvider = nil
+            client.server_capabilities.hoverProvider = false
+        end
+    end
+}
 
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("UserLspConfig", {}),
@@ -26,12 +35,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
         {
             c = {
                 name = "LSP",
+
                 i = {telescope_builtin.implementations, "go to implementations"},
                 j = {vim.lsp.buf.declaration, "go to declaration"},
                 k = {vim.lsp.buf.signature_help, "show signature"},
                 t = {telescope_builtin.lsp_type_definitions, "go to type definition"},
 
                 a = {vim.lsp.buf.code_action, "execute action"},
+                f = {vim.lsp.buf.format, "format file"},
                 r = {vim.lsp.buf.rename, "rename symbol"},
 
                 e = {vim.diagnostic.open_float, "show error"},
@@ -42,6 +53,19 @@ vim.api.nvim_create_autocmd("LspAttach", {
         },
         {
             mode = "n",
+            prefix = "<leader>",
+            buffer = env.buf,
+        }
+    )
+    which_key.register(
+        {
+            c = {
+                name = "LSP",
+                f = {vim.lsp.buf.format, "format range"},
+            },
+        },
+        {
+            mode = "v",
             prefix = "<leader>",
             buffer = env.buf,
         }

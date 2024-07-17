@@ -26,6 +26,7 @@
 
     pkgs.pyright
     pkgs.python3
+    pkgs.ruff
 
     pkgs.cabal-install
     pkgs.ghc
