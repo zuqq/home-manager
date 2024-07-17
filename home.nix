@@ -25,6 +25,7 @@
     pkgs.yq
 
     pkgs.nodePackages.pyright
+    pkgs.python3
 
     pkgs.cabal-install
     pkgs.ghc
