@@ -31,6 +31,10 @@
     pkgs.cabal-install
     pkgs.ghc
     pkgs.haskell-language-server
+
+    pkgs.cargo
+    pkgs.rustc
+    pkgs.rust-analyzer
   ];
 
   home.file = {
