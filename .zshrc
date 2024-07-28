@@ -29,4 +29,12 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-z/zsh-z.plugin.zsh
 autoload -Uz compinit && compinit -i
 
+# See: https://sw.kovidgoyal.net/kitty/shell-integration/#manual-shell-integration
+if test -n "$KITTY_INSTALLATION_DIR"; then
+  export KITTY_SHELL_INTEGRATION="no-rc"
+  autoload -Uz -- "$KITTY_INSTALLATION_DIR"/shell-integration/zsh/kitty-integration
+  kitty-integration
+  unfunction kitty-integration
+fi
+
 export LESS='--RAW-CONTROL-CHARS --tabs=4 --quit-if-one-screen'
