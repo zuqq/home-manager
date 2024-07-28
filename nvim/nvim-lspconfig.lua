@@ -2,6 +2,7 @@ local lspconfig = require("lspconfig")
 local telescope_builtin = require("telescope.builtin")
 local which_key = require("which-key")
 
+lspconfig.gopls.setup({})
 lspconfig.hls.setup({})
 lspconfig.pyright.setup({})
 lspconfig.ruff.setup({

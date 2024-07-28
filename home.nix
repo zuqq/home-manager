@@ -20,6 +20,12 @@
     tmux
     yq
 
+    # Go
+    go
+    gofumpt
+    golangci-lint
+    gopls
+
     # Haskell
     cabal-install
     ghc
