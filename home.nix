@@ -24,22 +24,22 @@
     pkgs.tmux
     pkgs.yq
 
-    pkgs.pyright
-    pkgs.python3
-    pkgs.ruff
+    pkgs.go
+    pkgs.gofumpt
+    pkgs.golangci-lint
+    pkgs.gopls
 
     pkgs.cabal-install
     pkgs.ghc
     pkgs.haskell-language-server
 
-    pkgs.cargo
-    pkgs.rustc
-    pkgs.rust-analyzer
+    pkgs.pyright
+    pkgs.python3
+    pkgs.ruff
 
-    pkgs.go
-    pkgs.gofumpt
-    pkgs.golangci-lint
-    pkgs.gopls
+    pkgs.cargo
+    pkgs.rust-analyzer
+    pkgs.rustc
   ];
 
   home.file = {
