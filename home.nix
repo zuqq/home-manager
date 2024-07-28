@@ -35,6 +35,11 @@
     pkgs.cargo
     pkgs.rustc
     pkgs.rust-analyzer
+
+    pkgs.go
+    pkgs.gofumpt
+    pkgs.golangci-lint
+    pkgs.gopls
   ];
 
   home.file = {
