@@ -3,7 +3,7 @@ local telescope_actions = require("telescope.actions")
 local telescope_builtin = require("telescope.builtin")
 local which_key = require("which-key")
 
-telescope.setup {
+telescope.setup({
   defaults = {
     layout_strategy = "vertical",
 
@@ -17,16 +17,16 @@ telescope.setup {
       },
     },
   },
-}
+})
 
 which_key.register(
-    {
-        [","] = {telescope_builtin.buffers, "find buffer"},
-        ["."] = {telescope_builtin.find_files, "find file"},
-        ["/"] = {telescope_builtin.live_grep, "search"},
-    },
-    {
-        mode = "n",
-        prefix = "<leader>",
-    }
+  {
+    [","] = {telescope_builtin.buffers, "find buffer"},
+    ["."] = {telescope_builtin.find_files, "find file"},
+    ["/"] = {telescope_builtin.live_grep, "search"},
+  },
+  {
+    mode = "n",
+    prefix = "<leader>",
+  }
 )

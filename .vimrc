@@ -41,6 +41,8 @@ set ttimeoutlen=100
 
 autocmd Filetype go setlocal noexpandtab
 
+autocmd Filetype lua setlocal shiftwidth=2 softtabstop=2 tabstop=2
+
 autocmd Filetype nix setlocal shiftwidth=2 softtabstop=2 tabstop=2
 
 autocmd Filetype objc setlocal commentstring=/*%s*/
