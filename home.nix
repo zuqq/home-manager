@@ -43,7 +43,26 @@
   ];
 
   home.file = {
-    ".config/kitty/kitty.conf".source = ./kitty.conf;
+    ".config/kitty/kitty.conf".text = ''
+      # See: https://developer.apple.com/fonts/
+      font_family SF Mono
+      font_size 13.0
+
+      include ${pkgs.kitty-themes}/share/kitty-themes/themes/tokyo_night_night.conf
+
+      map cmd+0 goto_tab 10
+      map cmd+1 goto_tab 1
+      map cmd+2 goto_tab 2
+      map cmd+3 goto_tab 3
+      map cmd+4 goto_tab 4
+      map cmd+5 goto_tab 5
+      map cmd+6 goto_tab 6
+      map cmd+7 goto_tab 7
+      map cmd+8 goto_tab 8
+      map cmd+9 goto_tab 9
+
+      shell_integration no-rc
+    '';
 
     ".editrc".source = ./.editrc;
 
@@ -90,6 +109,12 @@
         plugin = nvim-lspconfig;
         type = "lua";
         config = builtins.readFile ./nvim/nvim-lspconfig.lua;
+      }
+
+      {
+        plugin = tokyonight-nvim;
+        type = "lua";
+        config = builtins.readFile ./nvim/tokyonight-nvim.lua;
       }
 
       which-key-nvim
