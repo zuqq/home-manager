@@ -6,6 +6,8 @@ set clipboard+=unnamedplus
 " When formatting text, recognize numbered lists.
 set formatoptions+=n
 
+set noshowcmd
+
 " search
 nnoremap <silent> <C-L> :nohlsearch<CR>
 set ignorecase
