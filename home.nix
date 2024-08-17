@@ -50,6 +50,7 @@
     ".gitignore".source = ./.gitignore;
     ".inputrc".source = ./.inputrc;
     ".tmux.conf".source = ./.tmux.conf;
+    ".wezterm.lua".source = ./.wezterm.lua;
     ".zsh/pure".source = pure;
     ".zsh/zsh-autosuggestions".source = zsh-autosuggestions;
     ".zsh/zsh-z".source = zsh-z;
