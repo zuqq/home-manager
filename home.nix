@@ -38,11 +38,6 @@
     pyright
     python3
     ruff
-
-    # Rust
-    cargo
-    rust-analyzer
-    rustc
   ];
   home.file = {
     ".editrc".source = ./.editrc;
