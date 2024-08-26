@@ -18,9 +18,6 @@ lspconfig.rust_analyzer.setup({})
 
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
-    -- See: https://github.com/neovim/neovim/pull/19677
-    vim.bo[args.buf].formatexpr = nil,
-
     which_key.register(
       {
         g = {
