@@ -76,11 +76,6 @@
         type = "lua";
         config = builtins.readFile ./nvim/telescope-nvim.lua;
       }
-      {
-        plugin = tokyonight-nvim;
-        type = "lua";
-        config = builtins.readFile ./nvim/tokyonight-nvim.lua;
-      }
       vim-commentary
       which-key-nvim
     ];
