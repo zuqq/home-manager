@@ -5,9 +5,9 @@ export VISUAL=vim
 # See: https://www.johnhawthorn.com/2012/09/vi-escape-delays/
 KEYTIMEOUT=1
 
-bindkey -M viins '^R' history-incremental-search-backward
-# See: https://stackoverflow.com/a/549860
-stty -ixon && bindkey -M viins '^S' history-incremental-search-forward
+# See: https://github.com/junegunn/fzf?tab=readme-ov-file#setting-up-shell-integration
+source <(fzf --zsh)
+export FZF_CTRL_R_OPTS=--reverse
 
 HISTFILE=~/.zsh_history
 HISTSIZE=2000000

@@ -13,6 +13,7 @@
     bash
     curl
     fd
+    fzf
     git
     hyperfine
     jq
