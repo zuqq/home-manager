@@ -7,7 +7,6 @@ KEYTIMEOUT=1
 
 # See: https://github.com/junegunn/fzf?tab=readme-ov-file#setting-up-shell-integration
 source <(fzf --zsh)
-export FZF_CTRL_R_OPTS=--reverse
 
 HISTFILE=~/.zsh_history
 HISTSIZE=2000000
