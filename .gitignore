@@ -3,6 +3,7 @@
 *.swp
 
 .hypothesis/
+.ipynb_checkpoints/
 .venv/
 __pycache__/
 
