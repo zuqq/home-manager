@@ -5,6 +5,9 @@
 	up = rebase
 [core]
 	excludesfile = ~/.gitignore
+[diff]
+	algorithm = histogram
+	colorMoved = true
 [merge]
 	conflictstyle = diff3
 [pull]
@@ -14,6 +17,7 @@
 [rebase]
 	autosquash = true
 [rerere]
+	autoupdate = true
 	enabled = true
 [user]
 	name = zuqq

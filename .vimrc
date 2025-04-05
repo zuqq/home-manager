@@ -22,6 +22,7 @@ set expandtab
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
+autocmd Filetype gitconfig setlocal noexpandtab
 autocmd Filetype go setlocal noexpandtab
 autocmd Filetype lua setlocal shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype nix setlocal shiftwidth=2 softtabstop=2 tabstop=2
