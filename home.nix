@@ -39,6 +39,7 @@
     pyright
     python3
     ruff
+    uv
   ];
   home.file = {
     ".editrc".source = ./.editrc;
