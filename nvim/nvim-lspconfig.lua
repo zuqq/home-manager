@@ -59,6 +59,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
           p = {vim.diagnostic.goto_prev, "go to previous error"},
           x = {telescope_builtin.diagnostics, "list errors"},
         },
+        f = {
+          name = "LSP",
+
+          r = {vim.lsp.buf.references, "find references"},
+        }
       },
       {
         mode = "n",
