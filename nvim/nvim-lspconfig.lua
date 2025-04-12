@@ -4,7 +4,16 @@ local which_key = require("which-key")
 
 lspconfig.gopls.setup({})
 lspconfig.hls.setup({})
-lspconfig.pyright.setup({})
+lspconfig.pyright.setup({
+  settings = {
+    -- See: https://github.com/microsoft/pyright/blob/main/docs/configuration.md
+    python = {
+      analysis = {
+        typeCheckingMode = "strict",
+      },
+    },
+  },
+})
 lspconfig.ruff.setup({
   on_attach = function(client, bufnr)
     if client.name == "ruff" then
