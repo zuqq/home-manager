@@ -24,6 +24,7 @@ which_key.register(
     [","] = {telescope_builtin.buffers, "find buffer"},
     ["."] = {telescope_builtin.find_files, "find file"},
     ["/"] = {telescope_builtin.live_grep, "search"},
+    [" "] = {telescope_builtin.resume, "resume"},
   },
   {
     mode = "n",
