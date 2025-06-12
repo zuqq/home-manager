@@ -64,6 +64,11 @@
     vimAlias = true;
     plugins = with pkgs.vimPlugins; [
       {
+        plugin = blink-cmp;
+        type = "lua";
+        config = builtins.readFile ./nvim/blink-cmp.lua;
+      }
+      {
         plugin = nvim-lspconfig;
         type = "lua";
         config = builtins.readFile ./nvim/nvim-lspconfig.lua;
