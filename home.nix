@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  blink-cmp,
   pure,
   zsh-autosuggestions,
   zsh-z,
@@ -93,6 +94,16 @@
           sha256 = "sha256-gc/WJJ1s4s+hh8Mx8MTDg8pGGNOXxgKqBMwudJtpO4Y=";
         };
       })
+
+      {
+        plugin = pkgs.vimUtils.buildVimPlugin {
+          version = "scm-1";
+          pname = "blink-cmp";
+          src = blink-cmp;
+        };
+        type = "lua";
+        config = builtins.readFile ./nvim/blink-cmp.lua;
+      }
     ];
     extraConfig = builtins.readFile ./.vimrc;
   };
