@@ -9,11 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    blink-cmp = {
-      url = "github:Saghen/blink.cmp";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     pure = {
       url = "github:sindresorhus/pure";
       flake = false;
@@ -33,7 +28,6 @@
   outputs = {
     nixpkgs,
     home-manager,
-    blink-cmp,
     pure,
     zsh-autosuggestions,
     zsh-z,
@@ -44,8 +38,6 @@
       pkgs = nixpkgs.legacyPackages.aarch64-darwin;
       extraSpecialArgs = {
         inherit pure zsh-autosuggestions zsh-z;
-
-        blink-cmp = blink-cmp.packages.aarch64-darwin.blink-cmp;
       };
     };
   };
