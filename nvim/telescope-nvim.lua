@@ -21,8 +21,8 @@ telescope.setup({
 
 which_key.register(
   {
-    [","] = {telescope_builtin.buffers, "find buffer"},
-    ["."] = {telescope_builtin.find_files, "find file"},
+    ["b"] = {telescope_builtin.buffers, "find buffer"},
+    ["f"] = {telescope_builtin.find_files, "find file"},
     ["/"] = {telescope_builtin.live_grep, "search"},
     [" "] = {telescope_builtin.resume, "resume"},
   },
