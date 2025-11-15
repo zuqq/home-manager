@@ -1,9 +1,10 @@
 -- See: https://cmp.saghen.dev/configuration/general
 require("blink.cmp").setup({
-  completion = {
-    menu = {
-      auto_show = false,
-    },
+  keymap = {
+    preset = "default",
+
+    ["<Tab>"] = {"select_and_accept", "snippet_forward", "fallback"},
+    ["<S-Tab>"] = {"select_and_accept", "snippet_backward", "fallback"},
   },
 
   sources = {
