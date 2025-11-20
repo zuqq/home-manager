@@ -41,6 +41,8 @@
     python3
     ruff
     uv
+
+    claude-code
   ];
   home.file = {
     ".config/direnv/direnvrc".source = ./direnv/direnvrc;
