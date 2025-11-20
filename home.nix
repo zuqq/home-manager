@@ -17,6 +17,7 @@
     git
     hyperfine
     jq
+    lazygit
     ripgrep
     tmux
     yq
