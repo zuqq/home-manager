@@ -14,6 +14,7 @@
     curl
     fd
     fzf
+    gh
     git
     hyperfine
     jq
