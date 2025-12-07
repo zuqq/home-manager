@@ -51,6 +51,7 @@
     ".gitconfig".source = ./.gitconfig;
     ".gitignore".source = ./.gitignore;
     ".inputrc".source = ./.inputrc;
+    ".ipython/profile_default/ipython_config.py".source = ./.ipython/profile_default/ipython_config.py;
     ".tmux.conf".source = ./.tmux.conf;
     ".zsh/pure".source = pure;
     ".zsh/zsh-autosuggestions".source = zsh-autosuggestions;
