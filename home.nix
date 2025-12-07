@@ -46,7 +46,7 @@
     claude-code
   ];
   home.file = {
-    ".config/direnv/direnvrc".source = ./direnv/direnvrc;
+    ".config/direnv/direnvrc".source = ./.config/direnv/direnvrc;
     ".editrc".source = ./.editrc;
     ".gitconfig".source = ./.gitconfig;
     ".gitignore".source = ./.gitignore;
