@@ -5,7 +5,10 @@
   zsh-autosuggestions,
   zsh-z,
   ...
-}: {
+}: let
+  claude-code = pkgs.callPackage ./pkgs/claude-code/package.nix {};
+  codex = pkgs.callPackage ./pkgs/codex/package.nix {};
+in {
   home.username = "noah";
   home.homeDirectory = "/Users/noah";
   home.stateVersion = "23.05";
