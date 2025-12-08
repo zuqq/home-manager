@@ -44,6 +44,7 @@
     uv
 
     claude-code
+    codex
   ];
   home.file = {
     ".config/direnv/direnvrc".source = ./.config/direnv/direnvrc;
