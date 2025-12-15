@@ -24,6 +24,7 @@ in {
     lazygit
     ripgrep
     tmux
+    tree
     yq
 
     # Go
