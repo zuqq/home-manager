@@ -7,14 +7,14 @@
 }:
 buildNpmPackage (finalAttrs: {
   pname = "codex";
-  version = "0.65.0";
+  version = "0.72.0";
 
   src = fetchzip {
     url = "https://registry.npmjs.org/@openai/codex/-/codex-${finalAttrs.version}.tgz";
-    hash = "sha256-4N/vUNPNICa6INNfKg+JbLkkwJ4HdwNl26z6OyvkF/k=";
+    hash = "sha256-gt31kdIUxuiSgvaSm/PFenwfGud6uvxncAi6ABEJk/c=";
   };
 
-  npmDepsHash = "sha256-Vh7SUAcK/qovg0sUo8Rh2lD3rOVsuQ6AkURd4ggrVng=";
+  npmDepsHash = "sha256-4kCL/I3XEzHu/63S5y4KIvfrGcNTU7pN4xRmep3h23Y=";
 
   postPatch = ''
     cp ${./package-lock.json} package-lock.json
@@ -29,13 +29,13 @@ buildNpmPackage (finalAttrs: {
   dontNpmBuild = true;
 
   doInstallCheck = true;
-  nativeInstallCheckInputs = [ versionCheckHook ];
+  nativeInstallCheckInputs = [versionCheckHook];
 
   meta = {
     description = "Lightweight coding agent that runs in your terminal";
     homepage = "https://github.com/openai/codex";
     license = lib.licenses.asl20;
-    maintainers = [ lib.maintainers.malo ];
+    maintainers = [lib.maintainers.malo];
     mainProgram = "codex";
   };
 })

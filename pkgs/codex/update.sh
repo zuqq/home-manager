@@ -3,7 +3,7 @@
 
 set -euo pipefail
 
-version=$(npm view @anthropic-ai/claude-code version)
+version=$(npm view @openai/codex version)
 
 # Update version and hashes
-AUTHORIZED=1 NIXPKGS_ALLOW_UNFREE=1 nix-update claude-code --version="$version" --generate-lockfile
+AUTHORIZED=1 NIXPKGS_ALLOW_UNFREE=1 nix-update codex --version="$version" --generate-lockfile
