@@ -1,10 +1,10 @@
-local lspconfig = require("lspconfig")
 local telescope_builtin = require("telescope.builtin")
 local which_key = require("which-key")
 
-lspconfig.gopls.setup({})
-lspconfig.hls.setup({})
-lspconfig.pyright.setup({
+vim.lsp.enable("gopls")
+vim.lsp.enable("hls")
+
+vim.lsp.config("pyright", {
   settings = {
     -- See: https://github.com/microsoft/pyright/blob/main/docs/configuration.md
     python = {
@@ -14,7 +14,9 @@ lspconfig.pyright.setup({
     },
   },
 })
-lspconfig.ruff.setup({
+vim.lsp.enable("pyright")
+
+vim.lsp.config("ruff", {
   on_attach = function(client, bufnr)
     if client.name == "ruff" then
       client.server_capabilities.codeActionProvider = nil
@@ -23,7 +25,8 @@ lspconfig.ruff.setup({
     end
   end
 })
-lspconfig.rust_analyzer.setup({})
+vim.lsp.enable("ruff")
+vim.lsp.enable("rust_analyzer")
 
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
