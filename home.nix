@@ -43,7 +43,7 @@ in {
 
     # Python
     pyright
-    python3
+    python312
     ruff
     uv
 
