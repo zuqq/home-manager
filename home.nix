@@ -31,6 +31,7 @@ in {
     go
     gofumpt
     golangci-lint
+    golines
     gopls
 
     # Haskell
