@@ -85,6 +85,11 @@ in {
         config = builtins.readFile ./nvim/nvim-lspconfig.lua;
       }
       {
+        plugin = nvim-tree-lua;
+        type = "lua";
+        config = builtins.readFile ./nvim/nvim-tree-lua.lua;
+      }
+      {
         plugin = nvim-treesitter.withAllGrammars;
         type = "lua";
         config = builtins.readFile ./nvim/nvim-treesitter.lua;
