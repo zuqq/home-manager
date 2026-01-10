@@ -8,6 +8,7 @@
 }: let
   claude-code = pkgs.callPackage ./pkgs/claude-code/package.nix {};
   codex = pkgs.callPackage ./pkgs/codex/package.nix {};
+  pi-coding-agent = pkgs.callPackage ./pkgs/pi-coding-agent/package.nix {};
 in {
   home.username = "noah";
   home.homeDirectory = "/Users/noah";
@@ -50,6 +51,7 @@ in {
 
     claude-code
     codex
+    pi-coding-agent
   ];
   home.file = {
     ".config/direnv/direnvrc".source = ./.config/direnv/direnvrc;
