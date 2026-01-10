@@ -30,29 +30,13 @@ vim.lsp.enable("rust_analyzer")
 
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
-    which_key.register(
-      {
-        g = {
-          name = "go to",
-          d = {telescope_builtin.lsp_definitions, "definition"},
-          r = {telescope_builtin.lsp_references, "references"},
-          i = {telescope_builtin.lsp_implementations, "go to implementation"},
-          y = {telescope_builtin.lsp_type_definitions, "go to type definition"},
-        },
-      },
-      {
-        mode = "n",
-      }
-    )
-    which_key.register(
-      {
-        r = {vim.lsp.buf.rename, "rename"},
-      },
-      {
-        mode = "n",
-        prefix = "<leader>",
-      }
-    )
+    which_key.add({
+      {"gd", telescope_builtin.lsp_definitions, desc = "definition"},
+      {"gr", telescope_builtin.lsp_references, desc = "references"},
+      {"gi", telescope_builtin.lsp_implementations, desc = "go to implementation"},
+      {"gy", telescope_builtin.lsp_type_definitions, desc = "go to type definition"},
+      {"<leader>r", vim.lsp.buf.rename, desc = "rename"},
+    }, {buffer = args.buf})
   end,
 })
 

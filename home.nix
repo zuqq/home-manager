@@ -75,6 +75,11 @@ in {
     vimAlias = true;
     plugins = with pkgs.vimPlugins; [
       {
+        plugin = which-key-nvim;
+        type = "lua";
+        config = builtins.readFile ./nvim/which-key-nvim.lua;
+      }
+      {
         plugin = blink-cmp;
         type = "lua";
         config = builtins.readFile ./nvim/blink-cmp.lua;
@@ -100,20 +105,6 @@ in {
         config = builtins.readFile ./nvim/telescope-nvim.lua;
       }
       vim-commentary
-
-      (which-key-nvim.overrideAttrs {
-        # The next version was 3.0.0, which contained the commit that switched
-        # from `register` to `add`:
-        #
-        #     https://github.com/folke/which-key.nvim/commit/41374bcae462d897fa98c904a44127e258c0438c.
-        version = "2.1.0";
-        src = pkgs.fetchFromGitHub {
-          owner = "folke";
-          repo = "which-key.nvim";
-          rev = "0539da005b98b02cf730c1d9da82b8e8edb1c2d2";
-          sha256 = "sha256-gc/WJJ1s4s+hh8Mx8MTDg8pGGNOXxgKqBMwudJtpO4Y=";
-        };
-      })
     ];
     extraConfig = builtins.readFile ./.vimrc;
   };

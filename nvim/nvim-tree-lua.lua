@@ -64,12 +64,6 @@ require("nvim-tree").setup({
   },
 })
 
-require("which-key").register(
-  {
-    ["e"] = {"<cmd>NvimTreeFocus<CR>", "explorer"},
-  },
-  {
-    mode = "n",
-    prefix = "<leader>",
-  }
-)
+require("which-key").add({
+  {"<leader>e", "<cmd>NvimTreeFocus<CR>", desc = "explorer"},
+})
