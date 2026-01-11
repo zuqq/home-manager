@@ -2,6 +2,7 @@ local telescope_builtin = require("telescope.builtin")
 local which_key = require("which-key")
 
 vim.lsp.enable("gopls")
+
 vim.lsp.enable("hls")
 
 vim.lsp.config("pyright", {
@@ -26,7 +27,6 @@ vim.lsp.config("ruff", {
   end
 })
 vim.lsp.enable("ruff")
-vim.lsp.enable("rust_analyzer")
 
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
