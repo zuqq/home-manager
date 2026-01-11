@@ -1,4 +1,6 @@
+local nvim_tree = require("nvim-tree")
 local nvim_tree_api = require("nvim-tree.api")
+local which_key = require("which-key")
 
 local CURSOR_NAME = "NvimTreeCursor"
 local CURSOR = ("n-v-o:%s/l%s"):format(CURSOR_NAME, CURSOR_NAME)
@@ -46,7 +48,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
   end
 })
 
-require("nvim-tree").setup({
+nvim_tree.setup({
   on_attach = function(bufnr)
     nvim_tree_api.config.mappings.default_on_attach(bufnr)
     if nvim_tree_api.tree.is_tree_buf(bufnr) then
@@ -64,6 +66,6 @@ require("nvim-tree").setup({
   },
 })
 
-require("which-key").add({
+which_key.add({
   {"<leader>e", "<cmd>NvimTreeFocus<CR>", desc = "explorer"},
 })
