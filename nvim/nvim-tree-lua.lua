@@ -39,13 +39,23 @@ vim.api.nvim_create_autocmd({"WinEnter", "BufWinEnter", "TabEnter"}, {
   end,
 })
 
-vim.api.nvim_create_autocmd("BufEnter", {
-  nested = true,
+vim.api.nvim_create_autocmd("QuitPre", {
   callback = function(args)
-    if #vim.api.nvim_list_wins() == 1 and nvim_tree_api.tree.is_tree_buf(args.buf) then
-      vim.cmd("quit")
+    if nvim_tree_api.tree.is_tree_buf(args.buf) then
+      return
     end
-  end
+    local n = 0
+    for _, win in ipairs(vim.api.nvim_tabpage_list_wins(0)) do
+      local config = vim.api.nvim_win_get_config(win)
+      local buf = vim.api.nvim_win_get_buf(win)
+      if config.relative == "" and not nvim_tree_api.tree.is_tree_buf(buf) then
+        n = n + 1
+      end
+    end
+    if n == 1 then
+      nvim_tree_api.tree.close()
+    end
+  end,
 })
 
 nvim_tree.setup({
