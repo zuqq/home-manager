@@ -1,4 +1,5 @@
 require("which-key").setup({
+  delay = 1000,
   icons = {
     mappings = false,
     keys = {
