@@ -77,5 +77,5 @@ nvim_tree.setup({
 })
 
 which_key.add({
-  {"<leader>e", "<cmd>NvimTreeFocus<CR>", desc = "explorer"},
+  {"<leader>e", "<cmd>NvimTreeFocus<CR>", desc = "focus file tree"},
 })
