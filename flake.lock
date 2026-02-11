@@ -40,11 +40,11 @@
     "pure": {
       "flake": false,
       "locked": {
-        "lastModified": 1763198167,
-        "narHash": "sha256-AZSxP2g6BWoxyiSQH7yzbbbfGcwD8jgnXPPfcYwJUL0=",
+        "lastModified": 1770811375,
+        "narHash": "sha256-Fhk4nlVPS09oh0coLsBnjrKncQGE6cUEynzDO2Skiq8=",
         "owner": "sindresorhus",
         "repo": "pure",
-        "rev": "54bd501c802283dee0940457da6eb3e642bd1453",
+        "rev": "dbefd0dcafaa3ac7d7222ca50890d9d0c97f7ca2",
         "type": "github"
       },
       "original": {
