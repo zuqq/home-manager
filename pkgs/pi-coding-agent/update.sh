@@ -6,4 +6,4 @@ set -euo pipefail
 version=$(npm view @mariozechner/pi-coding-agent version)
 
 # Update version and hashes
-AUTHORIZED=1 NIXPKGS_ALLOW_UNFREE=1 nix-update pi-coding-agent --version="$version" --generate-lockfile
+nix-update pi-coding-agent --version="$version" --generate-lockfile
