@@ -20,6 +20,7 @@ in {
     fzf
     gh
     git
+    graphviz
     hyperfine
     jq
     lazygit
