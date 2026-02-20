@@ -4,6 +4,6 @@
 # this wrapper script from `..` to update all the packages in `pkgs/`.
 
 for d in pkgs/*; do
-    [ -x "$dir/update.sh" ] || continue
+    [ -x "$d/update.sh" ] || continue
     (cd "$d" && ./update.sh)
 done

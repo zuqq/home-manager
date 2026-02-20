@@ -1,0 +1,8 @@
+{
+  "version": "2.1.132",
+  "platforms": {
+    "darwin-arm64": {
+      "checksum": "2ce6b9007f38f5caf0d116ae35d59f1a6d40e902ae7f9f19aca6ec483697b764"
+    }
+  }
+}

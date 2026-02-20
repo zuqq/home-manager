@@ -3,7 +3,7 @@
 
 set -euo pipefail
 
-version=$(npm view @mariozechner/pi-coding-agent version)
+version=$(npm view @earendil-works/pi-coding-agent version)
 
 # Update version and hashes
 nix-update pi-coding-agent --version="$version" --generate-lockfile
