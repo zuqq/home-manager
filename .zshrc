@@ -19,6 +19,7 @@ setopt SHARE_HISTORY
 # See: https://github.com/sindresorhus/pure
 fpath+=(~/.zsh/pure)
 autoload -U promptinit && promptinit
+zstyle :prompt:pure:git:dirty detailed yes
 prompt pure
 
 # See: https://github.com/zsh-users/zsh-autosuggestions

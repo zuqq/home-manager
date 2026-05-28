@@ -21,14 +21,14 @@ buildNpmPackage (finalAttrs: let
   '';
 in {
   pname = "pi-coding-agent";
-  version = "0.75.5";
+  version = "0.79.10";
 
   src = fetchzip {
     url = "https://registry.npmjs.org/@earendil-works/pi-coding-agent/-/pi-coding-agent-${finalAttrs.version}.tgz";
-    hash = "sha256-oZIzs+txiowbC1wkb3u8yIsXj/RU8snrlsWX8q2zq84=";
+    hash = "sha256-n4bd83Y3d5wpm13Z2djHTRL+8miF9F5wR0BhCkXKP/U=";
   };
 
-  npmDepsHash = "sha256-qZcRymrhE2DgTQJDSELNYCwh1lM5UG/LIaFydCSKv8Q=";
+  npmDepsHash = "sha256-0VLk4UQ2GWoKVzSoHXdnC5aKQrsRyS2R8PhBlWGo7oo=";
 
   postPatch = ''
     rm -f npm-shrinkwrap.json
