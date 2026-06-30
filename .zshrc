@@ -1,3 +1,9 @@
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix
+
 bindkey -v
 
 export VISUAL=vim
@@ -30,12 +36,6 @@ source ~/.zsh/zsh-z/zsh-z.plugin.zsh
 autoload -Uz compinit && compinit -i
 
 export LESS='--RAW-CONTROL-CHARS --tabs=4 --quit-if-one-screen'
-
-# Nix
-if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-fi
-# End Nix
 
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
