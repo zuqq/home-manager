@@ -50,6 +50,10 @@ in {
     ruff
     uv
 
+    # TypeScript
+    typescript
+    typescript-language-server
+
     claude-code
     codex
     pi-coding-agent

@@ -28,6 +28,8 @@ vim.lsp.config("ruff", {
 })
 vim.lsp.enable("ruff")
 
+vim.lsp.enable("ts_ls")
+
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
     which_key.add({
