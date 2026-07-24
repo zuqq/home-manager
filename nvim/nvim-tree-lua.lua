@@ -59,6 +59,11 @@ vim.api.nvim_create_autocmd("QuitPre", {
 })
 
 nvim_tree.setup({
+  actions = {
+    open_file = {
+      quit_on_open = true,
+    },
+  },
   on_attach = function(bufnr)
     nvim_tree_api.config.mappings.default_on_attach(bufnr)
     if nvim_tree_api.tree.is_tree_buf(bufnr) then
@@ -77,5 +82,15 @@ nvim_tree.setup({
 })
 
 which_key.add({
-  {"<leader>e", "<cmd>NvimTreeFocus<CR>", desc = "focus file tree"},
+  {
+    "<leader>e",
+    function()
+      if nvim_tree_api.tree.is_tree_buf(vim.api.nvim_get_current_buf()) then
+        nvim_tree_api.tree.close()
+      else
+        nvim_tree_api.tree.focus()
+      end
+    end,
+    desc = "toggle file tree",
+  },
 })
