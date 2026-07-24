@@ -25,6 +25,7 @@ in {
     jq
     lazygit
     ripgrep
+    rlwrap
     tmux
     tree
     yq
