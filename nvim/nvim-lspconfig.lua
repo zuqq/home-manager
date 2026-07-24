@@ -24,7 +24,7 @@ vim.lsp.config("ruff", {
       client.server_capabilities.diagnosticProvider = nil
       client.server_capabilities.hoverProvider = false
     end
-  end
+  end,
 })
 vim.lsp.enable("ruff")
 
@@ -33,13 +33,13 @@ vim.lsp.enable("ts_ls")
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
     which_key.add({
-      {"gd", telescope_builtin.lsp_definitions, desc = "definition"},
-      {"gr", telescope_builtin.lsp_references, desc = "references"},
-      {"gi", telescope_builtin.lsp_implementations, desc = "go to implementation"},
-      {"gy", telescope_builtin.lsp_type_definitions, desc = "go to type definition"},
-      {"<leader>r", vim.lsp.buf.rename, desc = "rename"},
-    }, {buffer = args.buf})
+      { "gd", telescope_builtin.lsp_definitions, desc = "definition" },
+      { "gr", telescope_builtin.lsp_references, desc = "references" },
+      { "gi", telescope_builtin.lsp_implementations, desc = "go to implementation" },
+      { "gy", telescope_builtin.lsp_type_definitions, desc = "go to type definition" },
+      { "<leader>r", vim.lsp.buf.rename, desc = "rename" },
+    }, { buffer = args.buf })
   end,
 })
 
-vim.diagnostic.config({signs = false})
+vim.diagnostic.config({ signs = false })

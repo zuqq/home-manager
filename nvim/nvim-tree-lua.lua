@@ -6,8 +6,8 @@ local CURSOR_NAME = "NvimTreeCursor"
 local CURSOR = ("n-v-o:%s/l%s"):format(CURSOR_NAME, CURSOR_NAME)
 
 local function install_cursor()
-  local cursor = vim.api.nvim_get_hl(0, {name = "Cursor", link = false})
-  vim.api.nvim_set_hl(0, CURSOR_NAME, {blend = 100, fg = cursor.fg, bg = cursor.bg})
+  local cursor = vim.api.nvim_get_hl(0, { name = "Cursor", link = false })
+  vim.api.nvim_set_hl(0, CURSOR_NAME, { blend = 100, fg = cursor.fg, bg = cursor.bg })
 end
 
 vim.api.nvim_create_autocmd("ColorScheme", {
@@ -30,10 +30,10 @@ end
 
 local function lock_cursor()
   local cursor = vim.api.nvim_win_get_cursor(0)
-  vim.api.nvim_win_set_cursor(0, {cursor[1], 0})
+  vim.api.nvim_win_set_cursor(0, { cursor[1], 0 })
 end
 
-vim.api.nvim_create_autocmd({"WinEnter", "BufWinEnter", "TabEnter"}, {
+vim.api.nvim_create_autocmd({ "WinEnter", "BufWinEnter", "TabEnter" }, {
   callback = function(args)
     hide_cursor(nvim_tree_api.tree.is_tree_buf(args.buf))
   end,

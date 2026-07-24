@@ -20,8 +20,8 @@ telescope.setup({
 })
 
 which_key.add({
-  {"<leader>b", telescope_builtin.buffers, desc = "find buffer"},
-  {"<leader>f", telescope_builtin.find_files, desc = "find file"},
-  {"<leader>/", telescope_builtin.live_grep, desc = "search"},
-  {"<leader> ", telescope_builtin.resume, desc = "resume"},
+  { "<leader>b", telescope_builtin.buffers, desc = "find buffer" },
+  { "<leader>f", telescope_builtin.find_files, desc = "find file" },
+  { "<leader>/", telescope_builtin.live_grep, desc = "search" },
+  { "<leader> ", telescope_builtin.resume, desc = "resume" },
 })
