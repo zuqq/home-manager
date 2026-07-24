@@ -42,6 +42,9 @@ in {
     ghc
     haskell-language-server
 
+    # Lua
+    stylua
+
     # Nix
     alejandra
 
