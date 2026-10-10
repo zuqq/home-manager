@@ -9,6 +9,9 @@
   home.username = "noah";
   home.homeDirectory = "/Users/noah";
   home.stateVersion = "23.05";
+
+  home.sessionPath = ["${config.home.homeDirectory}/.local/bin"];
+
   home.packages = with pkgs; [
     bash
     curl
